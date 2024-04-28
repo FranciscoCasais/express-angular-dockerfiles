@@ -29,21 +29,21 @@ Estos son los archivos para crear una aplicación Angular de ABM de canciones co
 4. Para finalizar la ejecución y eliminar contenedores e imágenes:
 
     ```
-    # Detener el front y back-end
+    // Detener el front y back-end
     docker stop express-angular-dockerfiles-front-end
     docker stop express-angular-dockerfiles-back-end
 
-    # En caso de volver a ejecutar un contenedor
+    // En caso de volver a ejecutar un contenedor
     docker start express-angular-dockerfiles-front-end
     docker start express-angular-dockerfiles-back-end
 
-    # Eliminar contenedores e imágenes
+    // Eliminar contenedores e imágenes
     docker rm express-angular-dockerfiles-front-end
     docker rm express-angular-dockerfiles-back-end
     docker image rm express-angular-dockerfiles-front-end
     docker image rm express-angular-dockerfiles-back-end
 
-    # Verificar contenedores e imágenes descargadas
+    // Verificar contenedores e imágenes descargadas
     docker ps -a
     docker images
     ```
