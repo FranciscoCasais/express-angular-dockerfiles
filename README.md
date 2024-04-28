@@ -7,7 +7,7 @@
 
 ## Resumen
 
-Estos son los archivos setup para crear una aplicación Angular de ABM de canciones conectada a una API en Express.js. La aplicación Angular y la API se ejecutan localmente y por separado en dos contenedores Docker que se comunican entre sí a través en una red (es necesario tener Docker instalado).
+Estos son los archivos para crear una aplicación Angular de ABM de canciones conectada a una API en Express.js. La aplicación Angular y la API se ejecutan localmente y por separado en dos contenedores Docker que se comunican entre sí a través en una red (es necesario tener Docker instalado).
 
 - back-end > express-gen-ts: Archivos de la API
 - front-end > app: Archivos de la aplicación Angular
