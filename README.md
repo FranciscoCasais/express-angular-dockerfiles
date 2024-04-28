@@ -13,7 +13,7 @@ Estos son los archivos para crear una aplicación Angular de ABM de canciones co
 - front-end > app: Archivos de la aplicación Angular
 - dockerfile-backend: El archivo que crea la imagen Docker donde se ejecutará la API
 - dockerfile-frontend: El archivo que crea la imagen Docker donde se ejecutará la aplicación Angular
-- docker-compose.yaml: El archivo que crea ambos contenedores para cada sección del proyecto y los coloca dentro de la misma red local.
+- docker-compose.yaml: El archivo que crea ambos contenedores para cada sección del proyecto y los coloca dentro una red Docker local.
 
 ## Construcción y ejecución del proyecto
 
