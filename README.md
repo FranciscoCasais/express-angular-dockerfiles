@@ -25,4 +25,4 @@ Estos son los archivos para crear una aplicación Angular de ABM de canciones co
 
     ```docker-compose -f ./docker-compose.yaml up -d```
 
-3. La API se ejecuta por defecto en localhost:3000 y la aplicación Angular en localhost:4200. Podés ir tu navegador e ingresar estas direcciones para acceder a ellas.
+3. La API se ejecuta por defecto en ```localhost:3000``` y la aplicación Angular en ```localhost:4200```. Podés ir tu navegador e ingresar estas direcciones para acceder a ellas.
