@@ -33,7 +33,7 @@ Estos son los archivos para crear una aplicación Angular de ABM de canciones co
     docker stop express-angular-dockerfiles-front-end
     docker stop express-angular-dockerfiles-back-end
 
-    // En caso de volver a ejecutar un contenedor
+    // En caso de querer volver a ejecutar un contenedor
     docker start express-angular-dockerfiles-front-end
     docker start express-angular-dockerfiles-back-end
 
