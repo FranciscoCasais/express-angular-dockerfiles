@@ -1,0 +1,131 @@
+#songs-list {
+  display: grid;
+  row-gap: 14px;
+  column-gap: 14px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 4vh;
+  margin-bottom: 75px;
+  justify-content: space-around;
+}
+
+#add {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 18px;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 15px;
+  border-radius: 26px;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.35);
+}
+
+#add:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.45);
+}
+
+#blurred-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(3px);
+}
+
+#action-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 20px 10px 20px;
+}
+
+#action-panel h2 {
+  margin-bottom: 10px;
+}
+
+#action-panel p {
+  margin-bottom: 20px;
+}
+
+#song-form {
+  margin-bottom: 20px;
+}
+
+#song-form p {
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+
+#song-form input {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  border-radius: 5px;
+  background-color: rgb(238, 238, 238);
+  width: 50%;
+  margin-bottom: 5px;
+  padding: 2px;
+}
+
+#song-form input:focus {
+  outline: none;
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: 0px 2px 0px 0px var(--primary-color);
+}
+
+#action-panel button {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 30px;
+  width: 150px;
+  padding: 15px;
+  margin: 0px 10px 10px 0px;
+}
+
+#action-panel button:hover {
+  cursor: pointer;
+  border: 2px solid var(--hover-color);
+}
+
+.confirm-button {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.confirm-button:hover {
+  background-color: var(--hover-color);
+}
+
+#cancel-button {
+  background-color: white; 
+}
+
+#cancel-button:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+@media (min-width: 1050px) and (max-width: 1574px) {
+  #songs-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 525px) and (max-width: 1049px) {
+  #songs-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 524px) {
+  #songs-list {
+    grid-template-columns: 1fr;
+  }    
+}

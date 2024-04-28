@@ -1,0 +1,11 @@
+<div id="song">
+  <div id="song-info">
+    <h2 id="song-name">{{ cancion.nombre }}</h2>
+    <p id="song-duration">{{ cancion.minutos }}:{{ cancion.segundos < 10 ? '0' + cancion.segundos : cancion.segundos }}</p>
+    <p id="song-artist-album">{{ cancion.artista }}, {{ cancion.album }}</p>
+  </div>
+  <div id="song-buttons">
+    <a class="song-button" id="modify" (click)="modificar(cancion)">Modificar</a>
+    <a class="song-button" id="eliminate" (click)="eliminar(cancion)">Eliminar</a>
+  </div>
+</div>

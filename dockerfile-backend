@@ -1,0 +1,5 @@
+FROM node:lts
+WORKDIR ./express-gen-ts/
+COPY ./back-end/express-gen-ts/ .
+RUN npm install
+ENTRYPOINT ["npm", "run", "dev"]

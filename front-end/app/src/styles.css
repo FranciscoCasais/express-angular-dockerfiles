@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+:root {
+  --primary-color: #22ad15;
+  --secondary-color: #d4f8d2;
+  --hover-color: rgb(0, 150, 0);
+  --shadow-color: #E8E8E8;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}

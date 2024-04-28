@@ -1,0 +1,47 @@
+<section id="songs-list">
+  <app-cancion *ngFor="let cancion of canciones" [cancion]="cancion" (eventoModificar)="modificar(cancion)" (eventoEliminar)="eliminar(cancion)"></app-cancion>
+</section>
+<button id="add" (click)="agregar()">Agregar canción</button>
+<div id="blurred-background" *ngIf="blur"></div>
+<div id="action-panel" *ngIf="blur">
+
+  <h2 *ngIf="agregando">Agregar canción</h2>
+  <h2 *ngIf="modificando">Modificar canción</h2>
+  <h2 *ngIf="eliminando">Eliminar canción</h2>
+
+  <p *ngIf="agregando || modificando">Por favor, complete los siguientes campos:</p>
+  <p *ngIf="eliminando">¿Seguro que quiere eliminar la canción <br>"<b>{{ cancionActual.artista }} - {{ cancionActual.nombre }}</b>"?<br>Esta acción no se puede deshacer.</p>
+
+  <form id="song-form" *ngIf="agregando || modificando">
+
+    <p *ngIf="modificando">(Dejar vacío para mantener los mismos datos)</p><br *ngIf="modificando">
+
+    <label for="nombre">Nombre: </label>
+    <input type="text" name="nombre" id="addedName" required *ngIf="agregando"><br *ngIf="agregando">
+    <input type="text" name="nombre" id="newName" placeholder="{{ cancionActual.nombre }}" *ngIf="modificando"><br *ngIf="modificando">
+
+    <label for="artista">Artista: </label>
+    <input type="text" name="artista" id="addedArtist" required *ngIf="agregando"><br *ngIf="agregando">
+    <input type="text" name="artista" id="newArtist" placeholder="{{ cancionActual.artista }}" *ngIf="modificando"><br *ngIf="modificando">
+
+    <label for="album">Álbum: </label>
+    <input type="text" name="album" id="addedAlbum" required *ngIf="agregando"><br *ngIf="agregando">
+    <input type="text" name="album" id="newAlbum" placeholder="{{ cancionActual.album }}" *ngIf="modificando"><br *ngIf="modificando">
+
+    <label for="minutos">Minutos: </label>
+    <input type="number" name="minutos" min="0" id="addedMinutes" required *ngIf="agregando"><br *ngIf="agregando">
+    <input type="number" name="minutos" min="0" id="newMinutes" placeholder="{{ cancionActual.minutos }}" *ngIf="modificando"><br *ngIf="modificando">
+
+    <label for="segundos">Segundos: </label>
+    <input type="number" name="segundos" min="0" max="59" id="addedSeconds" required *ngIf="agregando"><br *ngIf="agregando">
+    <input type="number" name="segundos" min="0" max="59" id="newSeconds" placeholder="{{ cancionActual.segundos }}" *ngIf="modificando"><br *ngIf="modificando">
+
+  </form>
+
+  <button class="confirm-button" (click)="resultadoAccion('agregar')" *ngIf="agregando">Agregar</button>
+  <button class="confirm-button" (click)="resultadoAccion('modificar')" *ngIf="modificando">Aplicar</button>
+  <button class="confirm-button" (click)="resultadoAccion('eliminar')" *ngIf="eliminando">Eliminar</button>
+
+  <button id="cancel-button" (click)="resultadoAccion('cancelar')">Cancelar</button>
+
+</div>
