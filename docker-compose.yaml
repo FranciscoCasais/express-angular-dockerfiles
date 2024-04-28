@@ -1,14 +1,23 @@
 version: '3'
+# Servicios del proyecto
 services:
+  # API
   back-end:
+    # Dockerfile con el que se contruirá la imagen
     build:
+      # Ruta al Dockerfile
       context: .
+      # Nombre del Dockerfile
       dockerfile: dockerfile-backend
+    # Enlace de puertos entre el entorno local y el contenedor
     ports:
       - "3000:3000"
+    # Red donde se ubica el servicio
     networks:
       - mi-red
+    # Asignación de nombre personalizado al contenedor
     container_name: express-angular-dockerfiles-back-end
+  # Y así sucesivamente...
   front-end:
     build:
       context: .
@@ -18,6 +27,8 @@ services:
     networks:
       - mi-red
     container_name: express-angular-dockerfiles-front-end
+# Redes del proyecto
 networks:
+  # Red donde se ejecutarán los contenedores
   mi-red:
     name: mi-red
