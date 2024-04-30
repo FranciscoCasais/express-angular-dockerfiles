@@ -1,0 +1,6 @@
+[submodule "back-end"]
+	path = back-end
+	url = https://github.com/Instituto-Politecnico-Modelo/PSR2024-TP1-Casais-Eberle-BACK.git
+[submodule "front-end"]
+	path = front-end
+	url = https://github.com/Instituto-Politecnico-Modelo/PSR2024-TP1-Casais-Eberle-FRONT.git

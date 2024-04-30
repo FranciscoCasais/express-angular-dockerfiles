@@ -1,12 +1,18 @@
+# Partimos de una imagen con la versión LTS más reciente de Node
 FROM node:lts
+
 # Definimos el directorio de trabajo del contenedor
 WORKDIR ./app/
+
 # Copiamos archivos locales del front-end y los pegamos en el workdir
 COPY ./front-end/app/ .
+
 # Instalación de Angular y dependencias
 RUN npm install
-RUN npm install -g @angular/cli
+RUN npm install @angular/cli -g
+
 # Esto evita que salte el mensaje de si queremos compartir datos con el equipo de Google al ingresar ng serve, así no se detiene la terminal indefinidamente
 RUN export NG_CLI_ANALYTICS=false
+
 # Comando que se ejecutará al inicializarse el contenedor para correr la aplicación
 ENTRYPOINT ["ng", "serve", "--host", "0.0.0.0", "--port", "4200"]

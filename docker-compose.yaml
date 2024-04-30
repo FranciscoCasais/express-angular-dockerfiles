@@ -1,7 +1,7 @@
 version: '3'
 # Servicios del proyecto
 services:
-  # API
+  # Definimos el servicio de la API
   back-end:
     # Dockerfile con el que se contruirá la imagen
     build:
@@ -17,7 +17,7 @@ services:
       - mi-red
     # Asignación de nombre personalizado al contenedor
     container_name: express-angular-dockerfiles-back-end
-  # Y así sucesivamente...
+  # Definimos el servicio de la app, y así sucesivamente...
   front-end:
     build:
       context: .

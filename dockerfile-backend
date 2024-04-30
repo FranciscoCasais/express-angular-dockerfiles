@@ -1,9 +1,14 @@
+# Partimos de una imagen Linux con la versión LTS más reciente de Node
 FROM node:lts
+
 # Definimos directorio de trabajo del contenedor
 WORKDIR ./express-gen-ts/
+
 # Copiamos archivos locales del back-end y los pegamos en el workdir
 COPY ./back-end/express-gen-ts/ .
+
 # Instalación de dependencias
 RUN npm install
+
 # Comando que se ejecutará al inicializarse el contenedor para correr la API
 ENTRYPOINT ["npm", "run", "dev"]
