@@ -20,7 +20,7 @@ Estos son los archivos para crear una aplicación Angular de ABM de canciones co
 1. Clonar el repositorio en tu terminal con:
 
     ```
-   git clone https://github.com/FranciscoCasais/express-angular-dockerfiles.git
+   git clone --recursive https://github.com/FranciscoCasais/express-angular-dockerfiles.git
     ```
 
 3. Ingresar al directorio donde se clonó y ejecutar el archivo ```docker-compose.yaml``` en tu terminal con el comando:
