@@ -1,6 +1,6 @@
 # express-angular-dockerfiles
 
-## Integrantes:
+## Integrantes
 
 - Casais, Francisco
 - Panzera, Lucas
